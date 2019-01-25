@@ -341,7 +341,7 @@ nav li {
 .work-done {
   width: 100%;
   margin: 0 auto;
-  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 
@@ -358,6 +358,7 @@ nav li {
   position: relative;
   transition: all 0.4s ease-in-out;
   box-shadow: 3px 3px 20px #000;
+  border-radius: 10px;
 }
 
 .work-image:hover {
@@ -372,7 +373,7 @@ nav li {
   width: 100%;
   height: 350px;
   margin: 0;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #cccccc; 
   
 }
