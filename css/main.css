@@ -3,7 +3,7 @@
 
 /* ====== BASE STYLES ====== */
 body {
-  background-color: #d7efee;
+  background-image: linear-gradient(to bottom,#d7efee,#fff);
   position: relative;
 }
 
@@ -30,11 +30,11 @@ ul {
   padding: 0;
 }
 
-h1 {
+h1,
+h2 {
   font-family: 'Inconsolata', monospace;
 }
 
-h2, 
 h3, 
 h4, 
 p {
@@ -57,7 +57,7 @@ p {
 }
 
 section {
-  padding-bottom: 20%;
+  padding-top: 20%;
 }
 
 
@@ -86,6 +86,8 @@ nav .container {
 nav li { 
   list-style: none;
 }
+
+
 
 /*** Mobile Navigation **/
 
@@ -186,11 +188,9 @@ nav li {
     display: flex;
     justify-content: space-between;
   }
-
-   .nav-area {
-     width: 70%;
-     margin: 0;
-   }
+  .nav-area {
+    width: 60%;
+  }
 }
 
 #desktop-nav li {
@@ -277,16 +277,33 @@ nav li {
   color: rgb(46, 46, 46);
 }
 
-@media screen and (min-width: 894px)
-{
-  #about .content {
-    width: 70%;
-  }
+.about-content {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.about-decr,
+.about-skills {
+  width: 100%;
+
+}
+
+.about-skills p {
+  margin-top: 0;
+}
+
+.about-skills h3 {
+  margin: 0;
 }
 
 @media screen and (min-width: 1024px) {
-  #about .content {
-    width: 60%;
+
+  .about-decr,
+  .about-skills {
+    width: 45%;
   }
 }
 
@@ -305,6 +322,11 @@ nav li {
   list-style: none;
 }
 
+@media screen and (min-width: 1024px) {
+  .skills {
+    width: 60%;
+  }
+}
 
 
 
