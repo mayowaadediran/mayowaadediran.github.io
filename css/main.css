@@ -17,6 +17,14 @@ main {
   width: 90%;
 }
 
+@media screen and (min-width: 718px) {
+  .container {
+     width: 80%;
+  }
+}
+
+
+
 ul {
   margin: 0;
   padding: 0;
@@ -35,7 +43,7 @@ p {
 
 
 .content h1 {
-  font-size: 3em;
+  font-size: 2em;
   font-weight: 900;
   color: black;
   letter-spacing: 2px;
@@ -52,12 +60,17 @@ section {
   padding-bottom: 20%;
 }
 
+
+
 /* ====== NAV SECTION ====== 
   ==========================
 */ 
 nav {
   position: fixed;
   box-shadow: 0px 1px 70px #B3B3B3;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -158,47 +171,51 @@ nav li {
   transform: rotate(-135deg);
 }
 
-
-
 @media (min-width: 700px) {
   #mobile-nav-toggle {
     display: none;
   }
 }
 
+#desktop-nav {
+  display: none;
+}
 
-@media (min-width: 700px) {
-  nav .nav-area {
-    width: 60%;
-    margin: 0;
+@media screen and (min-width: 700px) {
+  #desktop-nav {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
   }
+
+   .nav-area {
+     width: 70%;
+     margin: 0;
+   }
 }
 
 #desktop-nav li {
   list-style: none;
   display: inline-block;
-  font-size: 0.8em;
-  transition: all 200ms ease-in-out;
-  position: relative;
-  top: 50%;
-  transform: perspective(1px) translateY(-50%);
+  
 }
 
-#desktop-nav .desktop-link {
-  font-family: "Source Sans Pro", sans-serif;
+#desktop-nav a {
+  display: inline-block;
+  font-family: "Inconsolata", sans-serif;
   letter-spacing: 1px;
   text-decoration: none;
-  color: white;
-  font-weight: 700;
+  color: #025297;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1em;
+  padding: 4px 7px;
 }
 
-#desktop-nav {
-  display: none;
-  height: 100%;
-}
+#download-cv {
+  border: 1px solid #0055FF;
+  border-radius: 5px;
+} 
+
 
 /* ================
 ====== HERO =======
@@ -209,6 +226,16 @@ nav li {
   flex-direction: column;
   justify-content: center;
   height: 100vh;
+}
+
+#hi .content {
+  width: 80%;
+}
+
+@media screen and (min-width: 1024px) {
+  #hi .content {
+    width: 60%;
+  }
 }
 
 #hi p {
@@ -250,6 +277,19 @@ nav li {
   color: rgb(46, 46, 46);
 }
 
+@media screen and (min-width: 894px)
+{
+  #about .content {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #about .content {
+    width: 60%;
+  }
+}
+
 
 .skills {
   padding: 0;
@@ -277,10 +317,23 @@ nav li {
 }
 
 .work-done {
-  margin-top: 30px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+
+.work-done__container {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .work-image {
+  width: 100%;
+  position: relative;
   transition: all 0.4s ease-in-out;
   box-shadow: 3px 3px 20px #000;
 }
@@ -302,6 +355,27 @@ nav li {
   
 }
 
+@media screen and (min-width: 598px) {
+  .work-image__container {
+    height: 450px;
+  }
+} 
+
+@media screen and (min-width: 804px) {
+    .work-image {
+      width: 80%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+  .work-image {
+    width: 50%;
+  }
+  .work-image__container {
+    height: 350px;
+  }
+}
+
 .work-image img {
   width: 100%;
   position: absolute;
@@ -311,6 +385,7 @@ nav li {
   bottom: 0;
   margin: 0 auto;
   object-fit: cover;
+  overflow: hidden;
 }
 
 .work-image__overlay {
@@ -331,6 +406,25 @@ nav li {
   opacity: 0;
 }
 
+.work-description {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+@media screen and (min-width: 1024px) {
+.work-description {
+    width: 30%;
+    margin-right: 0;
+    align-items: left;
+    justify-content: center;
+  }
+
+  .work-description.flex-1 {
+    order: -1;
+  }
+}
 
 .work-description p {
   font-family: "Source Sans Pro", sans-serif;
@@ -360,11 +454,16 @@ nav li {
   margin-bottom: 10px;
 }
 
+
+
+
+
 #quotes {
   padding-top: 20%;
+  padding-bottom: 0%;
 }
-blockquote {
 
+blockquote {
   font-family: 'Inconsolata', monospace;
   font-size: 1.5em;
   text-align: center;
@@ -374,7 +473,6 @@ blockquote {
 
 cite {
   margin-top: 30px;
-  display: inline-block;
   font-family: 'Inconsolata', monospace;
   text-align: center;
 }
@@ -387,6 +485,7 @@ footer ul {
   padding: 0;
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 10%;
 }
 
 footer li {
