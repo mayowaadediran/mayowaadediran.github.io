@@ -1,0 +1,23 @@
+{
+  "name": "mayowaadediran.me",
+  "version": "1.0.0",
+  "description": "Mayowa Adediran Personal Website",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayowaadediran/mayowaadediran.github.io.git"
+  },
+  "author": "Mayowa Adediran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mayowaadediran/mayowaadediran.github.io/issues"
+  },
+  "homepage": "https://github.com/mayowaadediran/mayowaadediran.github.io#readme",
+  "devDependencies": {
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.11.0"
+  }
+}
