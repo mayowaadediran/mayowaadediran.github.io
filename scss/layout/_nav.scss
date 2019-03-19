@@ -1,0 +1,166 @@
+nav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+ .logo {
+   margin-left: 5%;
+ }
+
+ .nav-links {
+   position: absolute;
+   width: 100%;
+   background: rgb(68, 68, 68);
+   top: 30px;
+   display: none;
+ }
+
+.nav-links li {
+  text-align: center;
+  margin: 40px auto;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.nav-links a {
+   text-decoration: none;
+   color: white;
+   font-size: 1em;
+   font-weight: 300;
+ }
+
+
+
+#mobile-nav-toggle {
+  position: absolute;
+  margin-right: 5%;
+  top: 2px;
+  right: 10px;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 2000;
+
+   span {
+    display: block;
+    position: absolute;
+    border: 1px solid rgb(255, 255, 255);
+    width: 100%;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+  }
+
+  span:nth-child(1) {
+    top: 0px;
+  }
+
+  span:nth-child(2) {
+    top: 10px;
+  }
+
+  span:nth-child(3) {
+    top: 20px;
+  }
+}
+
+
+#mobile-nav-toggle.open span:nth-child(1) {
+  top: 10px;
+  transform: rotate(135deg);
+}
+
+#mobile-nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+#mobile-nav-toggle.open span:nth-child(3) {
+  top: 10px;
+  transform: rotate(-135deg);
+}
+
+.nav-links.mobile-control {
+  display: block;
+  animation: booble 0.4s ease-in;
+}
+
+@keyframes booble {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0.8;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #mobile-nav-toggle {
+    display: none;
+  }
+
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+
+  .nav-links {
+    display: flex;
+    position: static;
+    background: none;
+    justify-content: space-between;
+    width: 40%;
+  }
+
+  .nav-links li {
+    margin: 0;
+  }
+
+  .nav-links a {
+    font-size: 0.8em;
+  }
+}
+
+
+// @media screen and (min-width: 700px) {
+//   #desktop-nav {
+//     display: flex;
+//     justify-content: space-between;
+//   }
+
+//   .nav-area {
+//     width: 60%;
+//   }
+// }
+
+// #desktop-nav li {
+//   list-style: none;
+//   display: inline-block;
+
+// }
+
+// #desktop-nav a {
+//   display: inline-block;
+//   font-family: "Inconsolata", sans-serif;
+//   letter-spacing: 1px;
+//   text-decoration: none;
+//   color: #025297;
+//   text-transform: uppercase;
+//   font-weight: 600;
+//   font-size: 1em;
+//   padding: 4px 7px;
+// }
+
+// #download-cv {
+//   border: 1px solid #0055FF;
+//   border-radius: 5px;
+// }

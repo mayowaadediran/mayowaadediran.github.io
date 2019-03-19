@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #171C28;
+  position: relative;
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+}
+
+@media screen and (min-width: 718px) {
+  .container {
+    width: 80%;
+  }
+}
+
+nav {
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+}

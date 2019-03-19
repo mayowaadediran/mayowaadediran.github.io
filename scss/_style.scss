@@ -1,0 +1,298 @@
+
+
+/* ====== NAV SECTION ====== 
+  ==========================
+*/ 
+
+
+
+/*** Mobile Navigation **/
+
+/* ================
+====== HERO =======
+==================== */
+
+#hi  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+#hi .content {
+  width: 80%;
+}
+
+@media screen and (min-width: 1024px) {
+  #hi .content {
+    width: 60%;
+  }
+}
+
+#hi p {
+  font-weight: 900;
+  color: black;
+  margin-top: 10%;
+}
+
+.email {
+  padding: 3px;
+  text-decoration: none;
+  box-shadow: inset 0 -3px 0 #0055FF;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.email:hover {
+  color: rgb(226, 226, 226);
+  box-shadow: inset 0 -22px 0 #0055FF;
+}
+
+
+
+
+/* ================
+===== ABOUT ========
+=================== */
+#about p {
+  color: rgb(0, 0, 0);
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+#about h3 {
+  margin-top: 10%;
+  font-size: 1.2em;
+  font-weight: 700;
+  color: rgb(46, 46, 46);
+}
+
+.about-content {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.about-decr,
+.about-skills {
+  width: 100%;
+
+}
+
+.about-skills p {
+  margin-top: 0;
+}
+
+.about-skills h3 {
+  margin: 0;
+}
+
+@media screen and (min-width: 1024px) {
+
+  .about-decr,
+  .about-skills {
+    width: 45%;
+  }
+}
+
+
+.skills {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.skills li {
+  margin-right: 20px;
+  list-style: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .skills {
+    width: 60%;
+  }
+}
+
+
+
+/* ==========
+=== WORK =====
+============= */
+
+.work-category {
+  margin-top: 50px;
+}
+
+.work-done {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+
+.work-done__container {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.work-image {
+  width: 100%;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 3px 3px 20px #000;
+  border-radius: 10px;
+}
+
+.work-image:hover {
+  box-shadow: 3px 10px 30px #000;
+}
+
+.work-image__container {
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 350px;
+  margin: 0;
+  border-radius: 10px;
+  background-color: #cccccc; 
+  
+}
+
+@media screen and (min-width: 598px) {
+  .work-image__container {
+    height: 450px;
+  }
+} 
+
+@media screen and (min-width: 804px) {
+    .work-image {
+      width: 80%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+  .work-image {
+    width: 50%;
+  }
+  .work-image__container {
+    height: 350px;
+  }
+}
+
+.work-image img {
+  width: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  margin: 0 auto;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.work-image__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: rgba(60, 58, 202, 0.2);
+  transition: opacity 0.4s ease-in;
+  cursor: pointer;
+}
+
+.work-image__overlay:hover {
+  opacity: 0;
+}
+
+.work-description {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+@media screen and (min-width: 1024px) {
+.work-description {
+    width: 30%;
+    margin-right: 0;
+    align-items: left;
+    justify-content: center;
+  }
+
+  .work-description.flex-1 {
+    order: -1;
+  }
+}
+
+.work-description p {
+  font-family: "Source Sans Pro", sans-serif;
+  color: rgb(20, 20, 20);
+  font-size: 0.8em;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+
+.skill-tag {
+  display: flex; 
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.skill-tag span {
+  display: inline-block;
+  font-family: "Inconsolata", monospace;
+  font-size: 1em;
+  font-weight: 700;
+  color: #025297;
+  text-transform: uppercase;
+  border: 1px solid #0055FF;
+  padding: 4px 7px;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+#quotes {
+  padding-top: 20%;
+  padding-bottom: 0%;
+}
+
+blockquote {
+  font-family: 'Inconsolata', monospace;
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 2;
+  margin: 0;
+}
+
+cite {
+  margin-top: 30px;
+  font-family: 'Inconsolata', monospace;
+  text-align: center;
+}
+
+/* =============
+==== FOOTER =====
+================ */
+
+
