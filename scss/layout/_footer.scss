@@ -1,8 +1,14 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+}
+
 footer ul {
   padding: 0;
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 10%;
+  margin-bottom: 10px;
 }
 
 footer li {
@@ -13,7 +19,26 @@ footer li {
 footer p {
   font-family: "Inconsolata", monospace;
   font-size: 0.8em;
-  color: rgb(0, 0, 0);
+  color: whitesmoke;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  footer ul {
+    order: 2;
+    width: 40%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+  }
+
+  footer p {
+    order: 1;
+  }
 }

@@ -5,6 +5,16 @@
 body {
   background-color: #171C28;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .container {
@@ -12,16 +22,3 @@ body {
   width: 90%;
 }
 
-@media screen and (min-width: 718px) {
-  .container {
-    width: 80%;
-  }
-}
-
-nav {
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-}
