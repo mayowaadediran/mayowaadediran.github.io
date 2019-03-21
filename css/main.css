@@ -9,7 +9,7 @@ body {
   justify-content: space-between; }
 
 main {
-  height: 80vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center; }
@@ -119,8 +119,13 @@ nav {
   .nav-links a {
     font-size: 0.8em; } }
 
+.content-head h2 {
+  font-family: 'Inconsolata', monospace;
+  color: #0055FF;
+  font-weight: 900; }
+
 /* ================
-====== HERO =======
+====== HI =======
 ==================== */
 #hi {
   display: flex;
@@ -172,6 +177,69 @@ nav {
 .email:hover {
   color: #e2e2e2;
   box-shadow: inset 0 -22px 0 #0055FF; }
+
+/* ================
+====== ABOUT ME =======
+==================== */
+#about {
+  margin-top: 50px;
+  margin-bottom: 50px; }
+
+.about-descr_content {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.about-decr p,
+.about-skills p {
+  color: #ccc;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 1px; }
+
+.about-skills {
+  margin-top: 10%; }
+
+.about-skills h3 {
+  font-size: 1.2em;
+  font-weight: 900;
+  font-family: 'Quicksand', sans-serif;
+  text-transform: uppercase;
+  color: #ccc; }
+
+.about-decr,
+.about-skills {
+  width: 100%; }
+
+@media screen and (min-width: 1024px) {
+  .about-decr,
+  .about-skills {
+    width: 45%; }
+  .about-skills {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; } }
+
+.skills {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  flex-wrap: wrap; }
+
+.skills li {
+  margin-right: 20px;
+  list-style: none; }
+
+@media screen and (min-width: 1024px) {
+  .skills {
+    width: 60%; } }
 
 footer {
   display: flex;
