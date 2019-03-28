@@ -31,25 +31,34 @@ nav {
 .logo {
   margin-left: 5%; }
 
-.nav-links {
+#nav-links {
   position: absolute;
   width: 100%;
-  background: #444444;
+  background: #171C28;
   top: 30px;
+  z-index: 2000;
   display: none; }
 
-.nav-links li {
+#nav-links li {
   text-align: center;
   margin: 40px auto;
   font-family: 'Quicksand', sans-serif; }
 
-.nav-links a {
+#nav-links a {
   text-decoration: none;
   color: white;
   font-size: 1em;
-  font-weight: 300; }
+  font-weight: 300;
+  transition: all 0.2s ease-in-out; }
+
+#nav-links a:hover {
+  box-shadow: inset 0 -22px 0 #0055FF; }
+
+#nav-links a.active-link {
+  box-shadow: inset 0 -22px 0 #0055FF; }
 
 #mobile-nav-toggle {
+  display: block;
   position: absolute;
   margin-right: 5%;
   top: 2px;
@@ -84,7 +93,7 @@ nav {
   top: 10px;
   transform: rotate(-135deg); }
 
-.nav-links.mobile-control {
+#nav-links.mobile-control {
   display: block;
   animation: booble 0.4s ease-in; }
 
@@ -108,15 +117,16 @@ nav {
     padding-top: 20px; }
   .logo {
     margin-left: 0; }
-  .nav-links {
+  #nav-links {
     display: flex;
+    flex-direction: row;
     position: static;
     background: none;
     justify-content: space-between;
     width: 40%; }
-  .nav-links li {
+  #nav-links li {
     margin: 0; }
-  .nav-links a {
+  #nav-links a {
     font-size: 0.8em; } }
 
 .content-head h2 {
@@ -134,7 +144,8 @@ nav {
 
 .hi-content h1 {
   font-family: 'Inconsolata', monospace;
-  font-weight: 400;
+  font-weight: 900;
+  font-size: 2.4em;
   color: #0055FF; }
 
 .strong-span {
@@ -240,6 +251,115 @@ nav {
 @media screen and (min-width: 1024px) {
   .skills {
     width: 60%; } }
+
+/* ==========
+=== WORK =====
+============= */
+#works {
+  margin-top: 50px;
+  margin-bottom: 50px; }
+
+.work-category {
+  margin-top: 50px; }
+
+.work-category h3 {
+  font-size: 1.2em;
+  font-weight: 900;
+  font-family: 'Quicksand', sans-serif;
+  text-transform: uppercase;
+  color: #ccc; }
+
+.work-done {
+  display: flex; }
+
+.work-done_list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto; }
+
+.work-done_image {
+  position: relative;
+  background: #575757;
+  height: 350px;
+  width: 350px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 3px 3px 20px #000;
+  transition: all 0.2s ease-in; }
+
+.work-done_image:hover {
+  box-shadow: 3px 10px 30px #000; }
+
+.work-done_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease-in;
+  transform: scale(0.9, 0.9); }
+
+.work-done_image:hover img {
+  transform: scale(1, 1); }
+
+.work-image__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: rgba(60, 58, 202, 0.2);
+  transition: opacity 0.4s ease-in; }
+
+.work-done_image:hover .work-image__overlay {
+  opacity: 0; }
+
+.work-done_descr {
+  margin-top: 20px;
+  width: 350px; }
+
+.work-done_descr a {
+  text-decoration: none;
+  color: #ccc;
+  font-family: 'Inconsolata', monospace;
+  font-size: 1.2em;
+  margin: 0;
+  box-shadow: inset 0 -3px 0 #0055FF;
+  transition: all 0.2s ease-in-out; }
+
+.work-done_descr a:hover {
+  box-shadow: inset 0 -22px 0 #0055FF; }
+
+.work-done_descr p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1em;
+  color: #ccc;
+  line-height: 25px; }
+
+.work-description {
+  display: flex;
+  flex-direction: column; }
+
+.skill-tag {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap; }
+
+.skill-tag span {
+  display: inline-block;
+  font-family: "Inconsolata", monospace;
+  font-size: 1em;
+  font-weight: 700;
+  color: #ccc;
+  text-transform: uppercase;
+  border: 1px solid #0055FF;
+  padding: 4px 7px;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px; }
 
 footer {
   display: flex;
